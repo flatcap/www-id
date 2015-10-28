@@ -1,0 +1,37 @@
+body {
+	background: url("certificate.png");
+	background-repeat: no-repeat;
+}
+
+h1, h2 {
+	color: #069;
+	background-color: transparent;
+}
+
+h1 {
+	font-size: 140%;
+	padding-top: 5px;
+	margin-left: 60px;
+	height: 40px;
+}
+
+h2 {
+	font-size: 120%;
+}
+
+div.command {
+	font-family: monospace;
+	background: black;
+	color: #0f0;
+	padding: 1em 1em 1em 1em;
+	margin: 1em 1em 1em 1em;
+	border-radius: 0.5em;
+	-moz-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+}
+
+div.indent {
+	margin: 0 0 0 2em;
+	padding: 0;
+}
+

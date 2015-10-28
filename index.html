@@ -1,11 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html>
 	<head>
-		<title></title>
+		<title>Richard Russon's Public Keys</title>
+		<link rel='icon' type='image/png' href='favicon.png' />
+		<link rel="stylesheet" type="text/css" href="id.css" />
 	</head>
 	<body>
+
+	<h1>Richard Russon's Public Keys</h1>
+
+	<p>
+	I welcome encrypted mail.  You may encrypt mail to me using either method below.
+	</p>
+
+	<h2>GPG</h2>
+
+	<p>
+	My GPG identity is:
+	<div class="indent">
+		Richard Russon (flatcap) &lt;<a href="mailto:rich@flatcap.org">rich@flatcap.org</a>&gt;<br />
+		69AD 1D63 6AC2 92E8 2065  8C16 EBC1 50E4 <b>B5DA 63DF</b><br />
+		<a href="richard.russon.flatcap.asc">http://flatcap.org/id/richard.russon.flatcap.asc</a>
+	</div>
+	</p>
+
+	<p>You can get my key from a GPG keyserver with either of these commands:</p>
+	<div class="command">
+		gpg2 --search-keys rich@flatcap.org<br />
+		gpg2 --recv-keys B5DA63DF
+	</div>
+
+	<p>Alternatively download it from this site:</p>
+	<div class="command">
+		curl -s https://flatcap.org/id/richard.russon.flatcap.asc | gpg2 --import -
+	</div>
+
+	<h2>S/MIME</h2>
+
+	<p>
+		I hold an S/MIME certificate from <a href="https://startssl.com/">StartSSL</a>.
+		To send me encrypted mail, first import StartSSL's intermediate certificates,
+		then my personal certificate.
+	</p>
+
+	<div class="indent">
+		<a href="startssl-intermediate.pem">http://flatcap.org/id/startssl-intermediate.pem</a>
+		<br />
+		<a href="richard.russon.flatcap.pem">http://flatcap.org/id/richard.russon.flatcap.pem</a>
+	</div>
+
+	<div class="command">
+		wget https://flatcap.org/id/richard.russon.flatcap.pem<br />
+		wget https://flatcap.org/id/startssl-intermediate.pem<br />
+		<br />
+		echo startssl | smime_keys add_root startssl-intermediate.pem<br />
+		echo rich     | smime_keys add_cert richard.russon.flatcap.pem
+	</div>
 	</body>
 </html>
 

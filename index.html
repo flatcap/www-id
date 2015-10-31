@@ -23,7 +23,21 @@
 	</div>
 	</p>
 
-	<p>You can get my key from a GPG keyserver with either of these commands:</p>
+	<p>
+	The ideal way to get my GPG key would be to use
+	<a href="https://en.wikipedia.org/wiki/DNS-based_Authentication_of_Named_Entities">DANE</a>.
+	This method retrieves my key from a DNS record which is validated using
+	<a href="https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions">DNSSEC</a>.
+	</p>
+
+	<div class="command">
+		openpgpkey --fetch rich@flatcap.org &gt; rich.russon.txt<br />
+		gpg2 --import rich.russon.txt
+	</div>
+
+	<p>
+	Alternatively, you can get my key from a GPG keyserver with either of the commands below.
+	However, you would need to contact me via another <i>secure</i> channel to verify the key.</p>
 	<div class="command">
 		gpg2 --search-keys rich@flatcap.org<br />
 		gpg2 --recv-keys B5DA63DF
@@ -38,7 +52,7 @@
 
 	<p>
 		I hold an S/MIME certificate from <a href="https://startssl.com/">StartSSL</a>.
-		To send me encrypted mail, first import StartSSL's intermediate certificates,
+		To send me encrypted mail, first import StartSSL's intermediate certificate,
 		then my personal certificate.
 	</p>
 

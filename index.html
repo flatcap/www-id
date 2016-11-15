@@ -9,7 +9,7 @@
 	<h1>Richard Russon's Public Keys</h1>
 
 	<p>
-	I welcome encrypted mail.  You may encrypt mail to me using either method below.
+	I welcome encrypted mail.
 	</p>
 
 	<h2>GPG</h2>
@@ -18,7 +18,7 @@
 	My GPG identity is:
 	<div class="indent">
 		Richard Russon (flatcap) &lt;<a href="mailto:rich@flatcap.org">rich@flatcap.org</a>&gt;<br />
-		69AD 1D63 6AC2 92E8 2065  8C16 EBC1 50E4 <b>B5DA 63DF</b><br />
+		<b>69AD 1D63 6AC2 92E8 2065  8C16 EBC1 50E4 B5DA 63DF</b><br />
 		<a href="richard.russon.flatcap.asc">http://flatcap.org/id/richard.russon.flatcap.asc</a>
 	</div>
 	</p>
@@ -39,35 +39,13 @@
 	Alternatively, you can get my key from a GPG keyserver with either of the commands below.
 	However, you would need to contact me via another <i>secure</i> channel to verify the key.</p>
 	<div class="command">
+		gpg2 --recv-keys 69AD1D636AC292E820658C16EBC150E4B5DA63DF
 		gpg2 --search-keys rich@flatcap.org<br />
-		gpg2 --recv-keys B5DA63DF
 	</div>
 
 	<p>Alternatively download it from this site:</p>
 	<div class="command">
 		curl -s https://flatcap.org/id/richard.russon.flatcap.asc | gpg2 --import -
-	</div>
-
-	<h2>S/MIME</h2>
-
-	<p>
-		I hold an S/MIME certificate from <a href="https://startssl.com/">StartSSL</a>.
-		To send me encrypted mail, first import StartSSL's intermediate certificate,
-		then my personal certificate.
-	</p>
-
-	<div class="indent">
-		<a href="startssl-intermediate.pem">http://flatcap.org/id/startssl-intermediate.pem</a>
-		<br />
-		<a href="richard.russon.flatcap.pem">http://flatcap.org/id/richard.russon.flatcap.pem</a>
-	</div>
-
-	<div class="command">
-		wget https://flatcap.org/id/richard.russon.flatcap.pem<br />
-		wget https://flatcap.org/id/startssl-intermediate.pem<br />
-		<br />
-		echo startssl | smime_keys add_root startssl-intermediate.pem<br />
-		echo rich     | smime_keys add_cert richard.russon.flatcap.pem
 	</div>
 	</body>
 </html>

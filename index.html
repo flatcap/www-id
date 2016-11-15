@@ -15,7 +15,17 @@
 	<h2>GPG</h2>
 
 	<p>
-	My GPG identity is:
+	I use two GPG keys, one for personal use, one for the NeoMutt project.
+	</p>
+
+	<h3>Personal</h3>
+
+	<p>
+	I use this key for personal email.
+	</p>
+
+	<p>
+	Identity:
 	<div class="indent">
 		Richard Russon (flatcap) &lt;<a href="mailto:rich@flatcap.org">rich@flatcap.org</a>&gt;<br />
 		<b>69AD 1D63 6AC2 92E8 2065  8C16 EBC1 50E4 B5DA 63DF</b><br />
@@ -46,6 +56,34 @@
 	<p>Alternatively download it from this site:</p>
 	<div class="command">
 		curl -s https://flatcap.org/id/richard.russon.flatcap.asc | gpg2 --import -
+	</div>
+
+	<h3>Neomutt</h3>
+
+	<p>
+	I use this key for signing NeoMutt Project releases.
+	</p>
+
+	<p>
+	Identity:
+	<div class="indent">
+		Richard Russon (NeoMutt) &lt;<a href="mailto:rich@flatcap.org">rich@flatcap.org</a>&gt;<br />
+		<b>86C2 3972 70DD 7A56 1263 CA4E 5FAF 0A6E E737 1805</b><br />
+		<a href="richard.russon.neomutt.asc">http://flatcap.org/id/richard.russon.neomutt.asc</a>
+	</div>
+	</p>
+
+	<p>
+	You can get my key from a GPG keyserver with either of the commands below.
+	However, you would need to contact me via another <i>secure</i> channel to verify the key.</p>
+	<div class="command">
+		gpg2 --recv-keys 86C2397270DD7A561263CA4E5FAF0A6EE7371805
+		gpg2 --search-keys rich@flatcap.org<br />
+	</div>
+
+	<p>Alternatively download it from this site:</p>
+	<div class="command">
+		curl -s https://flatcap.org/id/richard.russon.neomutt.asc | gpg2 --import -
 	</div>
 	</body>
 </html>
